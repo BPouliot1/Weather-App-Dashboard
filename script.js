@@ -5,4 +5,13 @@ $(document).ready(function() {
     const searchHistory = $('#searchHistory');
     const currentWeather = $('#currentWeather');
     const forecast = $('#forcast');
+
+    searchform.submit(function(event) {
+        event.preventDefault();
+        const city = cityInput.val();
+        if (city) {
+            getWeatherData(city);
+            cityInput.val('');
+        }
+    });
 })
