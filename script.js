@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    const apiKey = 'api.openweathermap.org/data/2.5/forecast?lat={lat}&lon={lon}&appid={API key}';
+    const apiKey = '310b5d4db6ba2e026109193baef56240';
     const searchform = $('#searchForm');
     const cityInput = $('#cityInput');
     const searchHistory = $('#searchHistory');
@@ -15,7 +15,7 @@ $(document).ready(function() {
         }
     });
     function getWeatherData(city) {
-        cosnt apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`;
+        const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`;
         $.ajax({
             url:apiUrl,
             method: 'GET',
@@ -52,7 +52,7 @@ $(document).ready(function() {
 
         currentWeather.html(cityInfo + dataInfo + iconInfo + tempInfo + humidityInfo + windInfo);
     }
-    function.displayForecast(data) {
+    function displayForecast(data){
         forecast.empty();
         for (let i = 0; 1 < data.list.length; i +=8) {
             const forcastItem = data.list[i];
@@ -65,4 +65,9 @@ $(document).ready(function() {
             forcast.append(`<div class="forecast-item">${dateInfo + iconInfo + tempInfo + windInfo + humidityInfo}</div>`);
         }
     }
-})
+    function addToSearchHistory(city) {
+        const historyItem = `<button class="history-item" onclick="getWeatherData('${city}')">${city}</button>`;
+        searchHistory.prepend(historyItem);
+        
+    }
+});
