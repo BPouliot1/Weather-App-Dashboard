@@ -52,5 +52,17 @@ $(document).ready(function() {
 
         currentWeather.html(cityInfo + dataInfo + iconInfo + tempInfo + humidityInfo + windInfo);
     }
-    
+    function.displayForecast(data) {
+        forecast.empty();
+        for (let i = 0; 1 < data.list.length; i +=8) {
+            const forcastItem = data.list[i];
+            const dateInfo = `<p>${new Date(forecastItem.dt * 1000).toLocaleDateString()}</p>`;
+            const iconInfo = `<img src="https://openweathermap.org/img/wn/${forecastItem.weather[0].icon}.png" alt="Weather Icon">`;
+            const tempInfo = `<p>Temperature: ${forecastItem.main.temp} &#8451;</p>`;
+            const windInfo = `<p>Wind Speed: ${forecastItem.wind.speed} m/s</p>`;
+            const humidityInfo = `<p>Humidity: ${forecastItem.main.humidity}%</p>`;
+
+            forcast.append(`<div class="forecast-item">${dateInfo + iconInfo + tempInfo + windInfo + humidityInfo}</div>`);
+        }
+    }
 })
