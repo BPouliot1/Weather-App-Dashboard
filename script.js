@@ -50,7 +50,7 @@ $(document).ready(function() {
         const cityInfo = `<h2>${data.name}, ${data.sys.country}</h2>`;
         const dataInfo = `<p>${new Date(data.dt * 1000).toLocaleDateString()}</p>`;
         const iconInfo = `<img src="https://openweathermap.org/img/wn/${data.weather[0].icon}.png" alt="Weather Icon">`;
-        const tempInfo = `<p>Temperature: ${tempFahrenheit} &#8451;</p>`;
+        const tempInfo = `<p>Temperature: ${tempFahrenheit} °F;</p>`;
         const humidityInfo = `<p>Humidity: ${data.main.humidity}%</p>`;
         const windInfo = `<p>Wind Speed: ${data.wind.speed} m/s</p>`;
 
@@ -64,7 +64,7 @@ $(document).ready(function() {
             const tempFahrenheit = (forecastItem.main.temp * 9/5 - 459.67).toFixed(2);
             const dateInfo = `<p>${new Date(forecastItem.dt * 1000).toLocaleDateString()}</p>`;
             const iconInfo = `<img src="https://openweathermap.org/img/wn/${forecastItem.weather[0].icon}.png" alt="Weather Icon">`;
-            const tempInfo = `<p>Temperature: ${tempFahrenheit} &#8451;</p>`;
+            const tempInfo = `<p>Temperature: ${tempFahrenheit} °F;</p>`;
             const windInfo = `<p>Wind Speed: ${forecastItem.wind.speed} m/s</p>`;
             const humidityInfo = `<p>Humidity: ${forecastItem.main.humidity}%</p>`;
 
