@@ -27,6 +27,20 @@ body {
     border-radius: 4px;
 }
 
+#searchForm button {
+    width: 20%;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#searchForm button:hover {
+    background-color: #0056b3;
+}
+
 .forecast-container {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
