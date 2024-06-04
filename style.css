@@ -18,3 +18,9 @@
     margin: 5px;
     cursor: pointer;
 }
+
+#currentWeather {
+    background: #f9f9f9;
+    padding: 20px;
+    margin-top: 20px;
+}
