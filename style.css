@@ -11,16 +11,23 @@
     text-align: center;
 }
 
+#currentWeather {
+    background: #f9f9f9;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+#searchHistory {
+    margin-top: 20px;
+}
+
 .history-item {
     background-color: #e0e0e0;
     border: none;
     padding: 10px;
     margin: 5px;
     cursor: pointer;
+    width: 100%;
+    text-align: left;
 }
 
-#currentWeather {
-    background: #f9f9f9;
-    padding: 20px;
-    margin-top: 20px;
-}
