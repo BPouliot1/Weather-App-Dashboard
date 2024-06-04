@@ -55,7 +55,7 @@ $(document).ready(function() {
     function displayForecast(data){
         forecast.empty();
         for (let i = 0; i < data.list.length; i +=8) {
-            const forcastItem = data.list[i];
+            const forecastItem = data.list[i];
             const dateInfo = `<p>${new Date(forecastItem.dt * 1000).toLocaleDateString()}</p>`;
             const iconInfo = `<img src="https://openweathermap.org/img/wn/${forecastItem.weather[0].icon}.png" alt="Weather Icon">`;
             const tempInfo = `<p>Temperature: ${forecastItem.main.temp} &#8451;</p>`;
