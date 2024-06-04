@@ -14,6 +14,12 @@ body {
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
+#searchForm {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
 .forecast-container {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
