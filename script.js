@@ -4,7 +4,7 @@ $(document).ready(function() {
     const cityInput = $('#cityInput');
     const searchHistory = $('#searchHistory');
     const currentWeather = $('#currentWeather');
-    const forecast = $('#forcast');
+    const forecast = $('#forecast');
 
     searchform.submit(function(event) {
         event.preventDefault();
