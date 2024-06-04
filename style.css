@@ -20,6 +20,13 @@ body {
     margin-bottom: 20px;
 }
 
+#searchForm input[type="text"] {
+    width: 75%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
 .forecast-container {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
